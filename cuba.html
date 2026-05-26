@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Climático de Cuba</title>
+    <link rel="stylesheet" href="style.css">
+    <script> if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+            }
+    </script>
+</head>
+<body>
+
+     <nav class="navbar">
+        <ul>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canada</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Mapa de Cuba</h1>
+
+    <!-- TROQUE O CAMINHO DA IMAGEM PELO SEU SVG DE CUBA -->
+    <img src="cuba/cubanovsvg.svg" alt="Mapa de Cuba" usemap="#cuba">
+
+    <map name="cuba">
+
+        <!-- MATANZAS -->
+        <area shape="poly"
+        coords="304,179,298,196,310,218,310,235,295,245,263,246,280,260,298,272,301,269,327,270,343,277,347,260,359,281,397,284,396,275,374,268,369,249,377,242,400,241,405,232,399,211,387,207,387,194,398,190,393,179,370,187,342,184,309,179"
+        href="#"
+        alt="Matanzas"
+        id="abrirModalmt">
+
+        <!-- VILLA CLARA -->
+        <area shape="poly"
+        coords="505,258,498,246,488,232,476,217,451,205,448,197,430,197,406,197,399,188,390,195,385,205,401,210,404,232,419,237,426,234,431,253,444,270,448,291,461,286,475,283,470,267,492,273,505,261"
+        href="#"
+        alt="Villa Clara"
+        id="abrirModalvc">
+
+        <!-- MAYABEQUE -->
+        <area shape="poly"
+        coords="304,179,267,174,267,186,260,184,257,196,240,196,237,205,245,223,280,225,307,232,312,226,305,214,300,194,302,178"
+        href="#"
+        alt="Mayabeque"
+        id="abrirModalmy">
+
+        <!-- PINAR DEL RÍO -->
+        <area shape="poly"
+        coords="205,227,194,212,193,195,179,193,155,193,135,206,115,217,71,245,63,276,75,280,35,288,13,300,55,293,29,305,33,318,77,297,100,287,106,286,106,271,145,265,166,257,181,245,205,226"
+        href="#"
+        alt="Pinar del Río"
+        id="abrirModalpr">
+
+    </map>
+
+    <!-- MODAL MATANZAS -->
+    <dialog id="minhaModalmt">
+
+        <h2>Província de Matanzas</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical de savana</td>
+                <td >Entre 628 mil e 710 mil habitantes</td>
+                <td >Altitude média é de 54 metros</td>
+                <td >Uma mistura de savanas agrícolas e florestas secundárias</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalmt">fechar</button>
+
+    </dialog>
+
+
+    <!-- MODAL VILLA CLARA -->
+    <dialog id="minhaModalvc">
+
+        <h2>Província de Villa Clara</h2>
+
+        <table border="1" cellpadding="8" >
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical de savana</td>
+                <td >Aproximadamente 665 mil</td>
+                <td >Aproximadamente 85 metros</td>
+                <td >Floresta tropical seca e de transição</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalvc">fechar</button>
+
+    </dialog>
+
+
+    <!-- MODAL MAYABEQUE -->
+    <dialog id="minhaModalmy">
+
+        <h2>Província de Mayabeque</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical de savana</td>
+                <td >Aproximadamente 380 mil habitantes</td>
+                <td >Aproximadamente 26 a 73 metros</td>
+                <td >Tropical sazonalmente úmido</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalmy">fechar</button>
+
+    </dialog>
+
+
+    <!-- MODAL PINAR DEL RÍO -->
+    <dialog id="minhaModalpr">
+
+        <h2>Província de Pinar del Río</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical de monções</td>
+                <td >Aproximadamente 151 mil</td>
+                <td >Altitude média é de 15 metros</td>
+                <td >floresta de coníferas, savanas, manguezais</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalpr">fechar</button>
+        
+
+    </dialog>
+
+<button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+<script>
+
+    // MATANZAS
+    const modalmt = document.getElementById('minhaModalmt');
+    const abrirmt = document.getElementById('abrirModalmt');
+    const fecharmt = document.getElementById('fecharModalmt');
+
+    abrirmt.addEventListener('click', function(event){
+        event.preventDefault();
+        modalmt.showModal();
+    });
+
+    fecharmt.addEventListener('click', function(){
+        modalmt.close();
+    });
+
+
+    // VILLA CLARA
+    const modalvc = document.getElementById('minhaModalvc');
+    const abrirvc = document.getElementById('abrirModalvc');
+    const fecharvc = document.getElementById('fecharModalvc');
+
+    abrirvc.addEventListener('click', function(event){
+        event.preventDefault();
+        modalvc.showModal();
+    });
+
+    fecharvc.addEventListener('click', function(){
+        modalvc.close();
+    });
+
+
+    // MAYABEQUE
+    const modalmy = document.getElementById('minhaModalmy');
+    const abrirmy = document.getElementById('abrirModalmy');
+    const fecharmy = document.getElementById('fecharModalmy');
+
+    abrirmy.addEventListener('click', function(event){
+        event.preventDefault();
+        modalmy.showModal();
+    });
+
+    fecharmy.addEventListener('click', function(){
+        modalmy.close();
+    });
+
+
+    // PINAR DEL RÍO
+    const modalpr = document.getElementById('minhaModalpr');
+    const abrirpr = document.getElementById('abrirModalpr');
+    const fecharpr = document.getElementById('fecharModalpr');
+
+    abrirpr.addEventListener('click', function(event){
+        event.preventDefault();
+        modalpr.showModal();
+    });
+
+    fecharpr.addEventListener('click', function(){
+        modalpr.close();
+    });
+
+    modalmt.addEventListener('click', function(event){
+            const rect = modalmt.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalmt.close();
+            }
+        });
+        modalvc.addEventListener('click', function(event){
+            const rect = modalvc.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalvc.close();
+            }
+        });
+        modalmy.addEventListener('click', function(event){
+            const rect = modalmy.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalmy.close();
+            }
+        });
+        modalpr.addEventListener('click', function(event){
+            const rect = modalpr.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalpr.close();
+            }
+        });
+
+</script>
+
+</body>
+</html>

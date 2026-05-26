@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Climático</title>
+    <link rel="stylesheet" href="style.css">
+    <script> if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+            }
+    </script>
+</head>
+<body>
+     <nav class="navbar">
+        <ul>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canada</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+    </nav>
+
+    <h1>Mapa de Angola</h1>
+
+    <img src="Angola/Angolasg.svg" alt="Mapa de Angola" usemap="#angola">
+
+    <map name="angola">
+
+        <!-- BENGO -->
+        <area shape="poly"
+        coords="72,194,85,191,113,187,129,187,145,200,158,201,154,217,154,226,135,231,139,245,132,254,123,256,124,269,128,277,128,290,141,304,153,306,153,322,154,333,154,340,147,336,137,332,126,337,104,336,96,329,93,326,85,312,80,294,74,280,76,272,93,273,95,256,101,248,96,242,82,238,87,224,71,196"
+        href="#"
+        alt="Bengo"
+        id="abrirModalbg">
+
+        <!-- MALANGE -->
+        <area shape="poly"
+        coords="285,172,273,185,261,167,241,172,239,183,231,184,230,212,219,217,216,226,209,230,206,236,212,243,207,270,188,275,181,283,179,301,216,305,219,302,236,300,247,320,248,329,268,354,290,361,308,371,309,405,324,403,326,392,342,397,361,395,370,386,379,388,376,364,372,352,367,344,365,338,345,324,349,313,309,296,300,272,311,264,314,235,309,214,285,173"
+        href="#"
+        alt="Malange"
+        id="abrirModalml">
+
+        <!-- UÍGE -->
+        <area shape="poly"
+        coords="157,93,171,93,194,88,258,89,258,99,266,104,262,115,270,139,276,143,277,154,284,167,279,181,269,179,262,169,249,169,237,185,231,184,232,213,219,219,213,211,207,205,198,208,195,204,184,204,185,216,168,221,156,229,152,216,159,200,145,199,120,186,107,189,114,181,111,167,109,153,128,143,134,135,145,134,158,127,168,112,160,89"
+        href="#"
+        alt="Uíge"
+        id="abrirModalui">
+
+        <!-- ZAIRE -->
+        <area shape="poly"
+        coords="159,92,82,91,54,98,24,105,32,117,54,151,58,169,71,196,83,192,104,189,111,181,115,182,110,170,110,164,106,153,106,147,114,146,135,134,146,130,163,123,171,112,167,102,159,91"
+        href="#"
+        alt="Zaire"
+        id="abrirModalzr">
+
+    </map>
+
+    <!-- BENGO -->
+    <dialog id="minhaModalbg">
+        <h2>Província do Bengo</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical seco</td>
+                <td >Aproximadamente 716 mil habitantes</td>
+                <td >Entre os 20 metros e os 800 metros</td>
+                <td >Savanas e florestas</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalbg">fechar</button>
+    </dialog>
+
+    <!-- MALANGE -->
+    <dialog id="minhaModalml">
+        <h2>Província de Malanje</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical úmido</td>
+                <td >Aproximadamente 1,29 milhão de habitantes</td>
+                <td >Entre 1.130 e 1.220 metros</td>
+                <td >Florestas e savanas</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalml">fechar</button>
+    </dialog>
+
+    <!-- UÍGE -->
+    <dialog id="minhaModalui">
+        <h2>Província do Uíge</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical de savana</td>
+                <td >Aproximadamente 1,6 milhão de habitantes</td>
+                <td >Entre 850 a 883 metros</td>
+                <td >floresta densa e savana</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalui">fechar</button>
+    </dialog>
+
+    <!-- ZAIRE -->
+    <dialog id="minhaModalzr">
+        <h2>Província do Zaire</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Tropical de savana</td>
+                <td >Aproximadamente 682 mil habitantes</td>
+                <td >Altitude média de aproximadamente 292 metros.</td>
+                <td >Mosaico de floresta e savana</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalzr">fechar</button>
+    </dialog>
+    <button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+<script>
+
+    // BENGO
+    const modalbg = document.getElementById('minhaModalbg');
+    const abrirbg = document.getElementById('abrirModalbg');
+    const fecharbg = document.getElementById('fecharModalbg');
+
+    abrirbg.addEventListener('click', function(event){
+        event.preventDefault();
+        modalbg.showModal();
+    });
+
+    fecharbg.addEventListener('click', function(){
+        modalbg.close();
+    });
+
+    // MALANGE
+    const modalml = document.getElementById('minhaModalml');
+    const abrirml = document.getElementById('abrirModalml');
+    const fecharml = document.getElementById('fecharModalml');
+
+    abrirml.addEventListener('click', function(event){
+        event.preventDefault();
+        modalml.showModal();
+    });
+
+    fecharml.addEventListener('click', function(){
+        modalml.close();
+    });
+
+    // UÍGE
+    const modalui = document.getElementById('minhaModalui');
+    const abrirui = document.getElementById('abrirModalui');
+    const fecharui = document.getElementById('fecharModalui');
+
+    abrirui.addEventListener('click', function(event){
+        event.preventDefault();
+        modalui.showModal();
+    });
+
+    fecharui.addEventListener('click', function(){
+        modalui.close();
+    });
+
+    // ZAIRE
+    const modalzr = document.getElementById('minhaModalzr');
+    const abrirzr = document.getElementById('abrirModalzr');
+    const fecharzr = document.getElementById('fecharModalzr');
+
+    abrirzr.addEventListener('click', function(event){
+        event.preventDefault();
+        modalzr.showModal();
+    });
+
+    fecharzr.addEventListener('click', function(){
+        modalzr.close();
+    });
+
+    modalbg.addEventListener('click', function(event){
+            const rect = modalbg.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalbg.close();
+            }
+        });
+        modalml.addEventListener('click', function(event){
+            const rect = modalml.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalml.close();
+            }
+        });
+        modalui.addEventListener('click', function(event){
+            const rect = modalui.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalui.close();
+            }
+        });
+        modalzr.addEventListener('click', function(event){
+            const rect = modalzr.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalzr.close();
+            }
+        });
+
+</script>
+
+</body>
+</html>

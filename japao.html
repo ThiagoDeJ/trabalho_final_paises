@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Climático</title>
+    <link rel="stylesheet" href="style.css">
+    <script> if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+            }
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canada</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+    </nav>
+
+<h1>Mapa do Japão</h1>
+
+<img src="Japão/japao.svg" alt="Mapa do Japão" usemap="#japao">
+
+<map name="japao">
+
+    <!-- AOMORI -->
+    <area shape="poly"
+    coords="384,265,376,254,384,248,388,242,390,223,401,221,403,234,408,241,412,236,418,233,423,234,422,218,413,223,406,222,408,216,411,205,419,208,421,210,430,207,430,216,432,225,430,234,433,239,445,254,443,259,430,262,422,265,420,261,417,257,412,262,396,261,382,264"
+    href="#"
+    alt="Aomori"
+    id="abrirModalao">
+
+    <!-- FUKUSHIMA -->
+    <area shape="poly"
+    coords="439,383,425,382,416,382,409,390,392,391,388,397,388,405,376,412,376,425,382,434,385,436,401,428,405,422,412,424,425,434,429,435,434,430,443,432,448,418,448,402,440,381"
+    href="#"
+    alt="Fukushima"
+    id="abrirModalfk">
+
+    <!-- HOKAIDO -->
+    <area shape="poly"
+    coords="423,4,479,57,497,64,531,68,546,47,547,57,541,66,545,84,556,95,566,93,563,99,549,108,543,114,536,111,534,113,537,119,526,118,522,116,503,130,490,150,490,172,481,167,466,166,440,147,424,147,415,151,406,162,400,155,392,151,385,154,381,164,385,169,388,172,402,172,403,177,417,184,413,192,398,189,388,197,388,210,377,208,373,199,380,191,380,181,362,167,368,150,387,135,389,130,381,123,387,115,395,115,397,118,414,118,416,108,416,96,421,84,422,71,420,67,423,48,412,22,420,6"
+    href="#"
+    alt="Hokaido"
+    id="abrirModalhk">
+
+    <!-- IWATE -->
+    <area shape="poly"
+    coords="446,257,434,261,420,269,418,274,417,297,416,310,423,320,426,330,435,333,444,337,454,336,459,323,467,309,467,286,448,257"
+    href="#"
+    alt="Iwate"
+    id="abrirModaliw">
+
+</map>
+
+
+<!-- MODAL AOMORI -->
+<dialog id="minhaModalao">
+
+    <h2>Província de Aomori</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Temperado frio</td>
+            <td >Cerca de 1,2 milhão de habitantes</td>
+            <td >Altitude média de aproximadamente 120 a 237 metros</td>
+            <td >Floresta temperada e boreal</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModalao">fechar</button>
+
+</dialog>
+
+
+<!-- MODAL FUKUSHIMA -->
+<dialog id="minhaModalfk">
+
+    <h2>Província de Fukushima</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Temperado continental úmido e subtropical úmido</td>
+            <td >Aproximadamente 1,74 milhão de habitantes</td>
+            <td >Aproximadamente 77 a 398 metros</td>
+            <td >Floresta temperada</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModalfk">fechar</button>
+
+</dialog>
+
+
+<!-- MODAL HOKAIDO -->
+<dialog id="minhaModalhk">
+
+    <h2>Província de Hokkaido</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Subártico úmido</td>
+            <td >Aproximadamente 5,1 milhões de habitantes</td>
+            <td >Altitude média é aproximadamente 98 metros</td>
+            <td >Floresta mista de coníferas</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModalhk">fechar</button>
+
+</dialog>
+
+
+<!-- MODAL IWATE -->
+<dialog id="minhaModaliw">
+
+    <h2>Província de Iwate</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Continental úmido</td>
+            <td >Aproximadamente 1,2 milhão de habitantes</td>
+            <td >Altitude média de aproximadamente 267 metros</td>
+            <td >Floresta temperada e subalpina</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModaliw">fechar</button>
+    
+
+</dialog>
+<button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+
+<script>
+
+    // AOMORI
+    const modalao = document.getElementById('minhaModalao');
+    const abrirao = document.getElementById('abrirModalao');
+    const fecharao = document.getElementById('fecharModalao');
+
+    abrirao.addEventListener('click', function(event){
+        event.preventDefault();
+        modalao.showModal();
+    });
+
+    fecharao.addEventListener('click', function(){
+        modalao.close();
+    });
+
+
+    // FUKUSHIMA
+    const modalfk = document.getElementById('minhaModalfk');
+    const abrirfk = document.getElementById('abrirModalfk');
+    const fecharfk = document.getElementById('fecharModalfk');
+
+    abrirfk.addEventListener('click', function(event){
+        event.preventDefault();
+        modalfk.showModal();
+    });
+
+    fecharfk.addEventListener('click', function(){
+        modalfk.close();
+    });
+
+
+    // HOKAIDO
+    const modalhk = document.getElementById('minhaModalhk');
+    const abrirhk = document.getElementById('abrirModalhk');
+    const fecharhk = document.getElementById('fecharModalhk');
+
+    abrirhk.addEventListener('click', function(event){
+        event.preventDefault();
+        modalhk.showModal();
+    });
+
+    fecharhk.addEventListener('click', function(){
+        modalhk.close();
+    });
+
+
+    // IWATE
+    const modaliw = document.getElementById('minhaModaliw');
+    const abririw = document.getElementById('abrirModaliw');
+    const fechariw = document.getElementById('fecharModaliw');
+
+    abririw.addEventListener('click', function(event){
+        event.preventDefault();
+        modaliw.showModal();
+    });
+
+    fechariw.addEventListener('click', function(){
+        modaliw.close();
+    });
+
+    modalao.addEventListener('click', function(event){
+            const rect = modalao.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalao.close();
+            }
+        });
+        modalfk.addEventListener('click', function(event){
+            const rect = modalfk.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalfk.close();
+            }
+        });
+        modalhk.addEventListener('click', function(event){
+            const rect = modalhk.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalhk.close();
+            }
+        });
+        modaliw.addEventListener('click', function(event){
+            const rect = modaliw.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modaliw.close();
+            }
+        });
+
+</script>
+</body>
+</html>

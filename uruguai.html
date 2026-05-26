@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Climático do Uruguai</title>
+    <link rel="stylesheet" href="style.css">
+    <script> if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+            }
+    </script>
+</head>
+<body>
+
+     <nav class="navbar">
+        <ul>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canada</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Mapa do Uruguai</h1>
+
+    <!-- TROQUE PELO SEU SVG DO URUGUAI -->
+    <img src="uruguai/uruguainovsv.svg" alt="Mapa do Uruguai" usemap="#uruguai">
+
+    <map name="uruguai">
+
+        <!-- ARTIGAS -->
+        <area shape="poly"
+        coords="432,199,428,174,437,145,420,133,301,19,287,4,259,1,230,10,224,37,162,40,149,20,141,22,140,40,137,52,94,89,113,134,153,152,178,162,243,201,259,190,305,198,335,179,366,164,389,174,411,177,429,200"
+        href="#"
+        alt="Artigas"
+        id="abrirModalar">
+
+        <!-- SALTO -->
+        <area shape="poly"
+        coords="118,136,153,154,172,161,249,205,273,196,326,190,364,166,395,179,409,181,435,204,420,224,396,241,404,249,394,276,365,310,376,334,356,351,353,368,304,348,267,348,214,340,151,310,129,304,118,288,105,279,86,294,71,286,71,276,95,237,102,206,98,170,108,167,116,134"
+        href="#"
+        alt="Salto"
+        id="abrirModalsa">
+
+        <!-- PAYSANDÚ -->
+        <area shape="poly"
+        coords="75,296,83,312,66,363,47,368,63,386,54,438,72,447,56,468,48,486,66,488,97,511,125,511,147,496,190,478,224,476,250,461,288,476,312,472,333,491,344,464,387,397,384,339,369,337,350,364,319,352,283,346,249,346,219,345,157,314,146,304,124,300,107,280,94,292,76,293"
+        href="#"
+        alt="Paysandú"
+        id="abrirModalpa">
+
+        <!-- RIO NEGRO -->
+        <area shape="poly"
+        coords="83,639,62,642,66,658,38,664,21,618,50,613,69,567,58,521,57,486,90,509,132,509,158,495,183,477,220,477,249,464,278,475,311,475,326,487,336,495,328,512,326,529,318,536,322,548,298,562,290,580,277,578,272,585,259,591,263,600,244,592,226,598,233,613,225,618,202,613,185,610,172,594,148,607,131,603,100,605,100,617,76,620,84,643"
+        href="#"
+        alt="Rio Negro"
+        id="abrirModalrn">
+
+    </map>
+
+
+    <!-- MODAL ARTIGAS -->
+    <dialog id="minhaModalar">
+
+        <h2>Departamento de Artigas</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Quente e temperado</td>
+                <td >Aproximadamente 78 mil habitantes</td>
+                <td >Altitude média de aproximadamente 124 metros</td>
+                <td >Pradarias</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalar">fechar</button>
+
+    </dialog>
+
+
+    <!-- MODAL SALTO -->
+    <dialog id="minhaModalsa">
+
+        <h2>Departamento de Salto</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Quente e temperado</td>
+                <td >Aproximadamente 94 mil habitantes</td>
+                <td >Aproximadamente 48 a 51 metros</td>
+                <td >Pradarias e campos nativos</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalsa">fechar</button>
+
+    </dialog>
+
+
+    <!-- MODAL PAYSANDÚ -->
+    <dialog id="minhaModalpa">
+
+        <h2>Departamento de Paysandú</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Subtropical úmido</td>
+                <td >Aproximadamente 121 mil habitantes</td>
+                <td >Aproximadamente 42 a 61 metros</td>
+                <td >Pradarias e savanas </td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalpa">fechar</button>
+
+    </dialog>
+<button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+
+    <!-- MODAL RIO NEGRO -->
+    <dialog id="minhaModalrn">
+
+        <h2>Departamento de Rio Negro</h2>
+
+        <table border="1" cellpadding="8">
+
+            <tr>
+                <th >Clima</th>
+                <th >População</th>
+                <th >Altitude</th>
+                <th >Vegetação Predominante</th>
+            </tr>
+
+            <tr>
+                <td >Subtropical úmido</td>
+                <td >Aproximadamente 57 mil habitantes</td>
+                <td >Aproximadamente 66 a 70 metros</td>
+                <td >Pradaria natural</td>
+            </tr>
+
+        </table>
+
+        <button class="bt-fechar" id="fecharModalrn">fechar</button>
+        <button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+    </dialog>
+
+
+<script>
+
+    // ARTIGAS
+    const modalar = document.getElementById('minhaModalar');
+    const abrirar = document.getElementById('abrirModalar');
+    const fecharar = document.getElementById('fecharModalar');
+
+    abrirar.addEventListener('click', function(event){
+        event.preventDefault();
+        modalar.showModal();
+    });
+
+    fecharar.addEventListener('click', function(){
+        modalar.close();
+    });
+
+
+    // SALTO
+    const modalsa = document.getElementById('minhaModalsa');
+    const abrirsa = document.getElementById('abrirModalsa');
+    const fecharsa = document.getElementById('fecharModalsa');
+
+    abrirsa.addEventListener('click', function(event){
+        event.preventDefault();
+        modalsa.showModal();
+    });
+
+    fecharsa.addEventListener('click', function(){
+        modalsa.close();
+    });
+
+
+    // PAYSANDÚ
+    const modalpa = document.getElementById('minhaModalpa');
+    const abrirpa = document.getElementById('abrirModalpa');
+    const fecharpa = document.getElementById('fecharModalpa');
+
+    abrirpa.addEventListener('click', function(event){
+        event.preventDefault();
+        modalpa.showModal();
+    });
+
+    fecharpa.addEventListener('click', function(){
+        modalpa.close();
+    });
+
+
+    // RIO NEGRO
+    const modalrn = document.getElementById('minhaModalrn');
+    const abrirrn = document.getElementById('abrirModalrn');
+    const fecharrn = document.getElementById('fecharModalrn');
+
+    abrirrn.addEventListener('click', function(event){
+        event.preventDefault();
+        modalrn.showModal();
+    });
+
+    fecharrn.addEventListener('click', function(){
+        modalrn.close();
+    });
+
+    modalar.addEventListener('click', function(event){
+            const rect = modalar.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalar.close();
+            }
+        });
+        modalsa.addEventListener('click', function(event){
+            const rect = modalsa.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalsa.close();
+            }
+        });
+        modalpa.addEventListener('click', function(event){
+            const rect = modalpa.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalpa.close();
+            }
+        });
+        modalrn.addEventListener('click', function(event){
+            const rect = modalrn.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalrn.close();
+            }
+        });
+
+</script>
+
+</body>
+</html>

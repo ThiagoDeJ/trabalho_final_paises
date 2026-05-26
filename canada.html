@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Climático</title>
+    <link rel="stylesheet" href="style.css">
+    <script> if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+            }
+    </script>
+</head>
+<body>
+
+     <nav class="navbar">
+        <ul>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canada</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+    </nav>
+
+    <h1>Mapa do Canadá</h1>
+
+    <img src= "Canada/canadanovosvg.svg" alt="Mapa do Canadá" usemap="#canada">
+        <map name="canada">
+        <!-- TERRITÓRIOS DO NOROESTE -->
+            <area shape="poly"
+            coords="367,466,374,399,324,375,320,369,308,362,273,309,278,277,302,285,303,280,343,290,375,143,317,168,275,228,182,246,172,269,187,281,179,310,172,352,178,396,192,404,194,421,267,447,368,470"
+            href="#"
+            alt="Territórios do Noroeste"
+            id="abrirModaltn">
+
+            <!-- ONTÁRIO -->
+            <area shape="poly"
+            coords="426,651,426,598,482,523,501,536,524,544,554,543,557,577,590,604,594,595,612,673,623,681,656,688,679,680,681,689,655,713,655,717,623,735,635,738,635,744,609,754,586,770,587,762,594,762,592,749,601,744,599,720,599,709,614,717,614,709,600,696,559,697,553,689,547,673,526,664,513,659,505,661,491,675,473,675,460,674,446,667,431,665,427,640"
+            href="#"
+            alt="Ontário"
+            id="abrirModalon">
+
+            <!-- SASKATCHEWAN -->
+            <area shape="poly"
+            coords="303,458,371,468,354,658,254,638,300,461"
+            href="#"
+            alt="Saskatchewan"
+            id="abrirModalsk">
+
+            <!-- YUKON -->
+            <area shape="poly"
+            coords="191,420,80,347,85,339,77,334,176,213,189,245,170,269,182,278,176,288,181,302,170,317,176,331,173,348,165,364,171,367,175,389,189,403,190,420"
+            href="#"
+            alt="Yukon"
+            id="abrirModalyk">
+        </map>
+
+<!-- MODAL TERRITÓRIOS DO NOROESTE -->
+<dialog id="minhaModaltn">
+
+    <h2>Territórios do Noroeste</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Subártico e polar ou ártico </td>
+            <td >Aproximadamente 45 mil</td>
+            <td >Possuem uma altitude média que varia drasticamente entre as suas regiões, desde áreas próximas ao nível do mar no litoral ártico até picos montanhosos na cordilheira oeste.</td>
+            <td >Tundra e floresta boreal</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModaltn">fechar</button>
+
+</dialog>
+
+
+<!-- MODAL ONTÁRIO -->
+<dialog id="minhaModalon">
+
+    <h2>Província de Ontário</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Continental úmido</td>
+            <td >Aproximadamente 16,2 milhões</td>
+            <td >Altitude provincial média de cerca de 245 metros</td>
+            <td >Florestas temperadas e Floresta Boreal</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModalon">fechar</button>
+
+</dialog>
+
+
+<!-- MODAL SASKATCHEWAN -->
+<dialog id="minhaModalsk">
+
+    <h2>Província de Saskatchewan</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Continental Úmido</td>
+            <td >Aproximadamente 1,26 milhão de habitantes</td>
+            <td >Altitude média: 511 metros</td>
+            <td >Pradarias e Floresta Boreal</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModalsk">fechar</button>
+
+</dialog>
+
+
+<!-- MODAL YUKON -->
+<dialog id="minhaModalyk">
+
+    <h2>Território de Yukon</h2>
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th >Clima</th>
+            <th >População</th>
+            <th >Altitude</th>
+            <th >Vegetação Predominante</th>
+        </tr>
+
+        <tr>
+            <td >Subártico</td>
+            <td >Aproximadamente 43 mil habitantes</td>
+            <td >Varia amplamente devido ao seu relevo montanhoso e planaltos, indo do nível do mar na costa ártica até 5.959 metros no Monte Logan</td>
+            <td >Floresta boreal</td>
+        </tr>
+
+    </table>
+
+    <button class="bt-fechar" id="fecharModalyk">fechar</button>
+    
+</dialog>
+<button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+
+<script>
+
+    // TERRITÓRIOS DO NOROESTE
+    const modaltn = document.getElementById('minhaModaltn');
+    const abrirtn = document.getElementById('abrirModaltn');
+    const fechartn = document.getElementById('fecharModaltn');
+
+    abrirtn.addEventListener('click', function(event){
+        event.preventDefault();
+        modaltn.showModal();
+    });
+
+    fechartn.addEventListener('click', function(){
+        modaltn.close();
+    });
+
+
+    // ONTÁRIO
+    const modalon = document.getElementById('minhaModalon');
+    const abriron = document.getElementById('abrirModalon');
+    const fecharon = document.getElementById('fecharModalon');
+
+    abriron.addEventListener('click', function(event){
+        event.preventDefault();
+        modalon.showModal();
+    });
+
+    fecharon.addEventListener('click', function(){
+        modalon.close();
+    });
+
+
+    // SASKATCHEWAN
+    const modalsk = document.getElementById('minhaModalsk');
+    const abrirsk = document.getElementById('abrirModalsk');
+    const fecharsk = document.getElementById('fecharModalsk');
+
+    abrirsk.addEventListener('click', function(event){
+        event.preventDefault();
+        modalsk.showModal();
+    });
+
+    fecharsk.addEventListener('click', function(){
+        modalsk.close();
+    });
+
+
+    // YUKON
+    const modalyk = document.getElementById('minhaModalyk');
+    const abriryk = document.getElementById('abrirModalyk');
+    const fecharyk = document.getElementById('fecharModalyk');
+
+    abriryk.addEventListener('click', function(event){
+        event.preventDefault();
+        modalyk.showModal();
+    });
+
+    fecharyk.addEventListener('click', function(){
+        modalyk.close();
+    });
+    modaltn.addEventListener('click', function(event){
+            const rect = modaltn.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modaltn.close();
+            }
+        });
+        modalon.addEventListener('click', function(event){
+            const rect = modalon.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalon.close();
+            }
+        });
+        modalsk.addEventListener('click', function(event){
+            const rect = modalsk.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalsk.close();
+            }
+        });
+        modalyk.addEventListener('click', function(event){
+            const rect = modalyk.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalyk.close();
+            }
+        });
+
+</script>
+
+</body>
+</html>

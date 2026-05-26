@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Climático</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script> if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+            }
+    </script>
+</head>
+<body>
+   
+
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canada</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+    </nav>
+
+    <h1>Mapa do Brasil</h1>
+
+    <img src= "brasil/br vetor.svg" alt="Mapa do Brasil" usemap="#brasil">
+    <map name="brasil">
+        <area shape="poly"
+        coords="498,443,521,412,521,389,533,386,531,370,541,356,521,350,478,327,445,338,439,335,426,386,379,396,372,410,424,415,442,460,487,449,498,443"
+        href="#"
+        alt="Minas Gerais"
+        id="abrirModal"
+        >
+        <area shape="poly"
+        coords="342,452,355,434,370,416,376,412,396,413,401,420,422,415,428,432,436,438,434,452,438,460,446,461,449,458,461,455,469,459,460,464,461,468,448,476,412,497,405,494,403,488,395,488,391,476,387,462,384,459,372,460,360,456,351,455,341,453"
+        href="#"
+        alt="São Paulo"
+        id="abrirModalsp">
+
+        <area shape="poly"
+        coords="542,391,550,384,557,357,558,325,562,304,567,308,583,286,578,285,573,273,576,272,572,246,554,236,540,249,528,237,505,249,488,247,482,265,467,269,456,262,442,276,448,282,445,295,446,311,446,321,449,328,448,337,475,325,483,326,484,332,493,330,516,341,522,351,541,356,533,370,528,377,543,391"
+        href="#"
+        alt="Bahia"
+        id="abrirModalba">
+
+        <area shape="poly"
+        coords="370,404,349,394,341,390,338,386,338,365,349,351,369,332,383,291,383,299,397,305,402,297,407,306,417,304,424,309,448,300,448,307,444,317,449,324,448,332,441,331,438,336,434,335,436,346,425,355,430,364,424,373,427,377,427,386,417,389,395,390,381,392,371,402"
+        href="#"
+        alt="Goiás"
+        id="abrirModalgo">
+    </map>
+
+        <dialog id="minhaModal">
+            <h2>Estado de Minas Gerais</h2>
+            <table border="1" cellpadding="8">
+		<tr>
+			<th >Clima</th>
+			<th >População</th>
+			<th >Altitude</th>
+			<th >Vegetação Predominante</th>
+		</tr>
+		<tr>
+			<td >Tropical</td>
+			<td >Aproximadamente 21,39 milhões de habitantes</td>
+			<td >Entre 600 e 1.500 metros de altitude</td>
+			<td >Cerrado</td>
+		</tr>
+		
+	</table>
+
+            <button class="bt-fechar" id="fecharModal">fechar</button>
+        </dialog>
+
+        <dialog id="minhaModalsp">
+            <h2>Estado de São Paulo</h2>
+            <table border="1" cellpadding="8">
+		<tr>
+			<th >Clima</th>
+			<th >População</th>
+			<th >Altitude</th>
+			<th >Vegetação Predominante</th>
+		</tr>
+		<tr>
+			<td >Tropical</td>
+			<td >Aproximadamente 46,1 milhões de habitantes</td>
+			<td >Entre 300 e 900 metros de altitude</td>
+			<td >Mata Atlântica e o Cerrado</td>
+		</tr>
+		
+	</table>
+            <button class="bt-fechar" id="fecharModalsp">fechar</button>
+        </dialog>
+
+        <dialog id="minhaModalba">
+            <h2>Estado da Bahia</h2>
+            <table border="1" cellpadding="8">
+		<tr>
+			<th >Clima</th>
+			<th >População</th>
+			<th >Altitude</th>
+			<th >Vegetação Predominante</th>
+		</tr>
+		<tr>
+			<td >Tropical</td>
+			<td >Aproximadamente 14,8 milhões de habitantes</td>
+			<td >Entre 300 e 900 metros de altitude</td>
+			<td >Caatinga</td>
+		</tr>
+		
+	</table>
+            <button class="bt-fechar" id="fecharModalba">fechar</button>
+        </dialog>
+
+        <dialog id="minhaModalgo">
+            <h2>Estado de Goiás</h2>
+            <table border="1" cellpadding="8">
+		<tr>
+			<th >Clima</th>
+			<th >População</th>
+			<th >Altitude</th>
+			<th >Vegetação Predominante</th>
+		</tr>
+		<tr>
+			<td >Tropical semiúmido</td>
+			<td >Aproximadamente 7,3 milhões de habitantes</td>
+			<td >Entre 600 a 900 metros de altitude</td>
+			<td >Cerrado</td>
+		</tr>
+		
+	</table>
+            <button class="bt-fechar" id="fecharModalgo">fechar</button>
+        </dialog>
+
+        <button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+
+
+    </div>
+    <script>
+        const modal = document.getElementById('minhaModal');
+        const abrir = document.getElementById('abrirModal');
+        const fechar = document.getElementById('fecharModal');
+
+        abrir.addEventListener('click', function(event){
+            event.preventDefault();
+            modal.showModal();
+
+        });
+        fechar.addEventListener('click', function(){
+            modal.close();
+
+        });
+
+        const modalsp = document.getElementById('minhaModalsp');
+        const abrirsp = document.getElementById('abrirModalsp');
+        const fecharsp = document.getElementById('fecharModalsp');
+
+        abrirsp.addEventListener('click', function(event){
+            event.preventDefault();
+            modalsp.showModal();
+        });
+         fecharsp.addEventListener('click', function(){
+            modalsp.close();
+
+        });
+        const modalba = document.getElementById('minhaModalba');
+        const abrirba = document.getElementById('abrirModalba');
+        const fecharba = document.getElementById('fecharModalba');
+
+        abrirba.addEventListener('click', function(event){
+            event.preventDefault();
+            modalba.showModal();
+        });
+         fecharba.addEventListener('click', function(){
+            modalba.close();
+
+        });
+        const modalgo = document.getElementById('minhaModalgo');
+        const abrirgo = document.getElementById('abrirModalgo');
+        const fechargo = document.getElementById('fecharModalgo');
+
+        abrirgo.addEventListener('click', function(event){
+            event.preventDefault();
+            modalgo.showModal();
+        });
+         fechargo.addEventListener('click', function(){
+            modalgo.close();
+
+        });
+         
+        modal.addEventListener('click', function(event){
+            const rect = modal.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modal.close();
+            }
+        });
+        modalsp.addEventListener('click', function(event){
+            const rect = modalsp.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalsp.close();
+            }
+        });
+        modalgo.addEventListener('click', function(event){
+            const rect = modalgo.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalgo.close();
+            }
+        });
+        modalba.addEventListener('click', function(event){
+            const rect = modalba.getBoundingClientRect();
+            if(
+                event.clientX < rect.left ||
+                event.clientX > rect.right ||
+                event.clientY < rect.top ||
+                event.clientY > rect.bottom 
+            ){
+                modalba.close();
+            }
+        });
+
+    </script>
+    
+
+       
+        
+</body>
+</html>
