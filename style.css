@@ -7,39 +7,57 @@
 .navbar{
     position:fixed;
     top:0;
-    left:0;
-    width:100%;
+    right:0;   /* 🔴 agora é direita */
+
+    width:220px;
+    height:100vh;
+
     background:#ff5a26;
-    padding:18px 30px;
-    z-index:1000;
 
     display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
 
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    padding-top:40px;
+
+    box-shadow:-4px 0 15px rgba(0,0,0,0.2);
+
+    z-index:1000;
 }
 
-/* MENU CENTRALIZADO */
-
+/* MENU VERTICAL */
 .navbar ul{
-    display:flex;
-    justify-content:center;
-    align-items:center;
     list-style:none;
-    gap:35px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+
+    padding:0;
+    margin-top:40px;
+
+    width:100%;
+    text-align:center;
 }
 
 .navbar a{
     text-decoration:none;
     color:white;
+
     font-size:18px;
     font-weight:bold;
+
+    display:block;
+    padding:10px;
+
     transition:0.3s;
 }
 
 .navbar a:hover{
-    color:#ffe100;
+    background:#ffe100;
+    color:#ff5a26;
+    border-radius:10px;
 }
 
 /* =========================
