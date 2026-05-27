@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIMAP</title>
+
+    <link rel="stylesheet" href="style.css">
+
+   <style>
+
+    body{
+        margin:0;
+        font-family:Arial, Helvetica, sans-serif;
+
+        /* background quente */
+        background:
+        linear-gradient(
+            #ffb38f
+        ),
+        url('img/backg.png') no-repeat center center/cover;
+
+        color:white;
+    }
+
+    .container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+    }
+
+    .card{
+        background:#ff5a26;
+
+        padding:35px;
+
+        border-radius:20px;
+
+        width:350px;
+
+        text-align:center;
+
+        box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    }
+
+    h1{
+        color:#ffe100;
+        margin-bottom:15px;
+    }
+
+    p{
+        line-height:1.6;
+        font-size:16px;
+    }
+
+    .logout-btn{
+        margin-top:20px;
+
+        border:none;
+
+        background:#ff5a26;
+
+        color:white;
+
+        padding:12px 25px;
+
+        border-radius:30px;
+
+        font-size:15px;
+
+        font-weight:bold;
+
+        cursor:pointer;
+
+        transition:0.3s;
+    }
+
+    .logout-btn:hover{
+        background:#ff7b52;
+        transform:scale(1.05);
+    }
+
+</style>
+
+    <script>
+
+        // Verifica se o usuário está logado
+        if(localStorage.getItem('auth') !== 'true'){
+            window.location.href = 'index.html';
+        }
+
+        function logout(){
+            localStorage.removeItem('auth');
+            window.location.href = 'index.html';
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <ul>
+            <li><a href="home.html">Menu</a></li>
+            <li><a href="angola.html">Angola</a></li>
+            <li><a href="brasil.html">Brasil</a></li>
+            <li><a href="cuba.html">Cuba</a></li>
+            <li><a href="canada.html">Canadá</a></li>
+            <li><a href="japao.html">Japão</a></li>
+            <li><a href="uruguai.html">Uruguai</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>CLIMAAPP</h1>
+
+            <p>
+                O Climaap é um site interativo que permite explorar informações geográficas e climáticas de diferentes regiões do mundo por meio de mapas dos países. A plataforma apresenta dados como clima, altitude, população e vegetação predominante das áreas selecionadas, facilitando a compreensão das características naturais e humanas de cada região.
+            </p>
+
+            <button class="logout-btn" onclick="logout()">
+                LOGOUT
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

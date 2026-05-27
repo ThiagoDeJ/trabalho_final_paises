@@ -1,13 +1,36 @@
 /* =========================
+   BACKGROUND GERAL
+========================= */
+
+body{
+    margin:0;
+    padding:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* Fundo com cores quentes */
+    background:linear-gradient(
+        135deg,
+        #fff4ee,
+        #ffd9c7,
+        #ffb38f
+    );
+
+    min-height:100vh;
+}
+
+/* =========================
    NAVBAR
 ========================= */
+
 *{
     box-sizing:border-box;
 }
+
 .navbar{
     position:fixed;
     top:0;
-    right:0;   /* 🔴 agora é direita */
+    right:0;
 
     width:220px;
     height:100vh;
@@ -23,9 +46,12 @@
     box-shadow:-4px 0 15px rgba(0,0,0,0.2);
 
     z-index:1000;
+
+    overflow-y:auto; /* libera rolagem */
 }
 
 /* MENU VERTICAL */
+
 .navbar ul{
     list-style:none;
 
@@ -61,18 +87,16 @@
 }
 
 /* =========================
-   LOGOUT NO CANTO DIREITO
-========================= */
-
-/* =========================
-   LOGOUT NO CANTO INFERIOR DIREITO
+   LOGOUT
 ========================= */
 
 .logout-btn{
     position:fixed;
 
     bottom:25px;
-    right:25px;
+
+    /* MAIS PARA ESQUERDA */
+    right:260px;
 
     border:none;
     background:#ff5a26;
@@ -120,18 +144,6 @@
     background:white;
     border-radius:5px;
 }
-dialog{
-    border:none;
-    border-radius:20px;
-    padding:35px;
-    width:90%;
-    max-width:550px;
-
-    background:white;
-    
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
 
 /* =========================
    MODAL
@@ -147,9 +159,8 @@ dialog{
     background:white;
 
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
-    
 
-    overflow:hidden; /* REMOVE BARRA LATERAL */
+    overflow:hidden;
 }
 
 dialog::backdrop{
@@ -180,25 +191,18 @@ td,
 th{
     display:block;
     width:100%;
-    border: none;
-    
+    border:none;
 }
-
-/* ESCONDE TH */
 
 th{
     display:none;
 }
 
-/* CONTAINER */
-
 tr{
-     margin-bottom:12px;
+    margin-bottom:12px;
     flex-direction:column;
     gap:12px;
 }
-
-/* INPUTS MENORES */
 
 td{
     background:#fff4ee;
@@ -206,8 +210,6 @@ td{
     padding:14px 16px;
 
     border-radius:12px;
-
-    font-size:15px;
 
     color:#444;
 
@@ -217,43 +219,30 @@ td{
 
     border:2px solid #ffd2c2;
 
-    width:100%;
-
-    font-size:15px;
-
     margin-bottom:14px;
 
     overflow-wrap:break-word;
-    
+
     align-items:center;
     justify-content:space-between;
 }
 
-/* LABELS */
-
 td:nth-child(1)::before{
     content:"Clima: ";
-    color:#ff5a26;
-    font-weight:bold;
 }
 
 td:nth-child(2)::before{
     content:"População: ";
-    color:#ff5a26;
-    font-weight:bold;
 }
 
 td:nth-child(3)::before{
     content:"Altitude: ";
-    color:#ff5a26;
-    font-weight:bold;
 }
 
 td:nth-child(4)::before{
     content:"Vegetação: ";
-    color:#ff5a26;
-    font-weight:bold;
 }
+
 td::before{
     display:block;
 
@@ -266,26 +255,6 @@ td::before{
     font-weight:bold;
 
     font-size:15px;
-}
-
-/* =========================
-   BOTÃO
-========================= */
-
-.bt-fechar{
-    width:100%;
-    border:none;
-    background:#ff5a26;
-    color:white;
-    padding:12px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:16px;
-    transition:0.3s;
-}
-
-.bt-fechar:hover{
-    background:#ff7b52;
 }
 
 /* =========================
@@ -344,12 +313,13 @@ td::before{
 
     .logout-btn{
         position:absolute;
-        right:20px;
+
         top:14px;
+
+        /* AJUSTADO */
+        right:90px;
 
         padding:10px 18px;
         font-size:14px;
     }
-
-    
 }

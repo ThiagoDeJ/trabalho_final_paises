@@ -8,7 +8,7 @@ function login(){
 
     if (user === usuariovalido && pass === senhavalida){
         localStorage.setItem('auth', 'true');
-        window.location.href = 'brasil.html';
+        window.location.href = 'home.html';
     } else{
         document.getElementById('msgerror').style.display = 'block'
     }
